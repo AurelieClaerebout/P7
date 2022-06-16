@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+  background-color: $tertiary;
+  padding-top: 15px;
+  border-bottom: $primary 5px solid;
+  // height: 5vh;
+  img {
+    height: 60px;
+    width: 300px;
+    @include mobile {
+      height: 38px;
+    }
+  }
+}

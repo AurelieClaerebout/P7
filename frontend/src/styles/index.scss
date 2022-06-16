@@ -1,0 +1,25 @@
+@import "./settings";
+@import "./utils/mixins";
+
+// SCSS PAGES
+@import "./pages/Home";
+@import "./pages/Thread";
+@import "./pages/Profil";
+
+// SCSS COMPONENTS COMMUN
+@import "./components/Header";
+@import "./components/Nav";
+@import "./components/Footer";
+
+// SCSS COMPONENTS HOME
+@import "./components/Home/Log";
+
+// SCSS COMPONENTS THREAD
+@import "./components/Thread/NewPost";
+@import "./components/Thread/Posts";
+@import "./components/Thread/Card";
+@import "./components/Thread/Comment";
+
+// SCSS COMPONENTS PROFIL
+@import "./components/Profil/ProfilUser";
+@import "./components/Profil/Admin";

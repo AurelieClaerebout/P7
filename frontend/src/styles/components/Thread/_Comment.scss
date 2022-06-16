@@ -1,0 +1,52 @@
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  .comment-card {
+    width: 80%;
+    border: 2px solid $tertiary;
+    border-radius: 10px;
+    background: $secondary;
+    margin: 5px auto;
+  }
+  .info-comm {
+    display: flex;
+    justify-content: space-around;
+    .date-comm {
+      font-size: smaller;
+    }
+  }
+
+  .comment {
+    background: white;
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  .form-comment {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    textarea {
+      font-size: 1.2rem;
+      width: 65%;
+      border: 2px solid $tertiary;
+      border-radius: 20px;
+      &:focus {
+        background: rgba(255, 215, 215, 0.6);
+      }
+    }
+    button {
+      border-radius: 20px;
+      padding: 5px 10px;
+      background-color: $secondary;
+      color: $tertiary;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+}

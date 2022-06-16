@@ -1,0 +1,59 @@
+.profil {
+  background: url(../../assets/bg-post.webp) fixed center;
+  background-size: cover;
+  height: 88vh;
+  overflow: scroll;
+  .user {
+    background: rgba(255, 215, 215, 0.8);
+    border-radius: 30px;
+    width: 80%;
+    margin: 50px auto;
+    @include tablet {
+      width: 95%;
+      margin: 30px auto;
+    }
+  }
+  .profil-admin {
+    button {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1.2rem;
+      background: $tertiary;
+      border: solid 1px $primary;
+      border-radius: 20px;
+      color: $secondary;
+      font-weight: bold;
+    }
+    .toggle-true {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .allUsers {
+        background: rgba(255, 215, 215, 0.8);
+        border: solid 1px $primary;
+        height: 160px;
+        width: 40%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow: scroll;
+        overflow-x: hidden;
+        @include tablet {
+          width: 80%;
+        }
+        @include mobile {
+          height: 50%;
+        }
+      }
+    }
+  }
+}

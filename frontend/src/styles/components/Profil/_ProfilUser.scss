@@ -1,0 +1,195 @@
+.container-profil {
+  width: 90%;
+  margin: auto;
+  @include tablet {
+    width: 100%;
+  }
+  .bienvenue {
+    color: $tertiary;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 50px;
+    @include tablet {
+      font-size: 1.8rem;
+    }
+    @include mobile {
+      font-size: 1.6rem;
+    }
+  }
+
+  .email {
+    font-size: 1.5rem;
+    background: rgba(78, 81, 102, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    color: $secondary;
+    font-weight: bold;
+    width: 30%;
+    margin: 40px auto;
+    text-align: center;
+    @include tablet {
+      width: 75%;
+    }
+  }
+  .info-user {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60px;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    h2 {
+      color: $tertiary;
+      padding-bottom: 10px;
+    }
+    .picture,
+    .bio {
+      border: 2px solid $tertiary;
+      padding: 20px;
+      border-radius: 20px;
+      width: 25%;
+      text-align: center;
+      @include tablet {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px;
+      }
+      @include mobile {
+        width: 75%;
+        flex-direction: column;
+      }
+      img {
+        border-radius: 100px;
+        max-width: 225px;
+        max-height: 225px;
+        @include tablet {
+          max-width: 150px;
+          max-height: 150px;
+        }
+      }
+    }
+    .user-bio {
+      background: white;
+      padding: 10px;
+      border-radius: 20px;
+      height: 80%;
+      font-size: 1.2rem;
+      @include tablet {
+        width: 60%;
+      }
+      @include mobile {
+        width: 90%;
+      }
+    }
+  }
+  .icon {
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+      flex-direction: column;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    .modify-user,
+    .deleteUser {
+      display: flex;
+      font-size: 1.2rem;
+      align-items: center;
+      background: rgba(78, 81, 102, 0.8);
+      color: $secondary;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 20px;
+      margin: 40px auto;
+      @include tablet {
+        margin: 20px auto;
+        width: 42%;
+        display: flex;
+        justify-content: space-around;
+      }
+      @include mobile {
+        width: 80%;
+      }
+    }
+  }
+  .update {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 12px;
+    flex-direction: column;
+    h3 {
+      align-self: center;
+      margin-bottom: 5px;
+      color: $tertiary;
+    }
+    .update-valid {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      @include tablet {
+        flex-direction: column;
+      }
+      label {
+        text-decoration: underline;
+        padding: 10px;
+        font-size: 1.2rem;
+      }
+      textarea {
+        padding: 5px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.1rem;
+        @include tablet {
+          width: 50%;
+          padding: 0;
+        }
+        @include mobile {
+          width: 95%;
+        }
+      }
+      .text-bio {
+        width: 30%;
+        @include tablet {
+          width: 50%;
+          margin-bottom: 10px;
+        }
+        @include mobile {
+          width: 95%;
+        }
+      }
+    }
+    .valid-modif {
+      display: flex;
+      justify-content: space-between;
+      @include tablet {
+        justify-content: space-evenly;
+      }
+      @include mobile {
+        margin-top: 15px;
+      }
+      button {
+        @include btn;
+        @include mobile {
+          padding: 0;
+        }
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+}

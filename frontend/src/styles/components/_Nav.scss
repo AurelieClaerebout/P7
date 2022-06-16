@@ -1,0 +1,66 @@
+.nav-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  .nav {
+    background: rgba(78, 81, 102, 0.8);
+    border-radius: 0 0 20px 0;
+    display: flex;
+    border: 1px solid $primary;
+    flex-direction: row-reverse;
+    @include mobile {
+      flex-direction: column-reverse;
+      width: 100%;
+      border-radius: 0 0 20px 20px;
+    }
+    .welcome {
+      color: $secondary;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      @include mobile {
+        padding: 0;
+        justify-content: center;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      @include mobile {
+        justify-content: space-around;
+      }
+      li {
+        transition: 0.1s;
+        display: inline-block;
+        padding: 6px;
+        margin: 6px;
+        @include mobile {
+          padding: 5px 0 0 0;
+          margin: 0;
+        }
+
+        &:hover {
+          animation: rotate-hor-center 1s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+        }
+        img {
+          width: 45px;
+          height: 45px;
+          cursor: pointer;
+        }
+        @keyframes rotate-hor-center {
+          0% {
+            transform: rotateX(0);
+          }
+          100% {
+            transform: rotateX(-360deg);
+          }
+        }
+      }
+    }
+  }
+}

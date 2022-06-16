@@ -1,0 +1,16 @@
+.thread {
+  background: url(../../assets/bg-post.webp) fixed center;
+  background-size: cover;
+  height: 89vh;
+  overflow: scroll;
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    @include tablet {
+      flex-direction: column-reverse;
+      width: 100%;
+      margin: auto;
+    }
+  }
+}

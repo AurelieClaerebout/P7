@@ -1,0 +1,28 @@
+.posts {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 2px solid $tertiary;
+  width: 55%;
+  height: 75vh;
+  overflow: scroll;
+
+  @include tablet {
+    width: 90%;
+    margin: 0 auto 15px;
+    height: 85vh;
+  }
+
+  h2 {
+    @include h2;
+    text-align: center;
+  }
+  .posts-list {
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    @include mobile {
+      width: 95%;
+    }
+  }
+}

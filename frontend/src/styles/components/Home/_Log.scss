@@ -1,0 +1,79 @@
+.connect-form {
+  border: 4.5px solid $tertiary;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 30%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(255, 215, 215, 0.9);
+  @include tablet {
+    width: 50%;
+  }
+  @include mobile {
+    width: 80%;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+
+    li {
+      background-color: rgba(253, 45, 1, 0.7);
+      padding: 15px;
+      border: 0.5px solid $tertiary;
+      border-radius: 25px;
+      width: 25%;
+      color: $tertiary;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 5px 5px 20px 1px $tertiary;
+      @include tablet {
+        width: 30%;
+      }
+    }
+    .li-active {
+      border: 2px solid $primary;
+      color: $primary;
+      background: $tertiary;
+      box-shadow: 5px 5px 20px 1px $primary;
+    }
+  }
+  #create-user {
+    // background: rgba(253, 45, 1, 0.7);
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+  h2 {
+    @include h2;
+  }
+
+  label {
+    font-weight: 600;
+    color: $tertiary;
+  }
+
+  input {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    width: 45%;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    &:focus {
+      background-color: rgb(171, 171, 171);
+    }
+    @include tablet {
+      width: 80%;
+    }
+  }
+  .btn {
+    @include btn;
+  }
+}

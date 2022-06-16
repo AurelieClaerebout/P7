@@ -1,0 +1,23 @@
+.home {
+  background: url(../../assets/bg-log.webp) fixed center;
+  background-size: cover;
+  height: 88vh;
+  padding-top: 50px;
+
+  h1 {
+    color: $secondary;
+    background-color: $tertiary;
+    width: 30%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    @include tablet {
+      width: 80%;
+    }
+    @include mobile {
+      margin: 30px auto;
+      font-size: 1.2rem;
+    }
+  }
+}

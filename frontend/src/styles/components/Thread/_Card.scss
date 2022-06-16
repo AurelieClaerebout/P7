@@ -1,0 +1,200 @@
+.card {
+  border: solid $secondary 2px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .info {
+    height: 10%;
+    background-color: $secondary;
+    display: flex;
+    color: $tertiary;
+    justify-content: space-around;
+    border-bottom: 1px solid $secondary;
+    border-radius: 20px 20px 0 0;
+
+    .poster {
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: flex;
+      .img-poster {
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        @include mobile {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      p {
+        align-self: center;
+      }
+    }
+    .date {
+      align-self: center;
+      font-size: small;
+    }
+  }
+  .container-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    background-color: rgba(78, 81, 102, 0.8);
+    align-items: center;
+    width: 100%;
+
+    .post {
+      width: 90%;
+      display: flex;
+    }
+
+    .message {
+      width: 95%;
+      background: rgba(255, 215, 215, 0.8);
+      align-self: center;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto 15px;
+      height: 70px;
+      overflow: scroll;
+      @include mobile {
+        width: 100%;
+        margin: 15px auto;
+      }
+      .message-value {
+        width: 90%;
+        font-size: 1.2rem;
+        text-align: center;
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .post-img {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    width: 550px;
+    @include mobile {
+      height: 180px;
+      width: 260px;
+    }
+
+    .img-post {
+      max-height: 300px;
+      max-width: 475px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      @include mobile {
+        max-width: 250px;
+        max-height: 175px;
+      }
+    }
+  }
+
+  .icon {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: $secondary;
+    border-radius: 0 0 20px 20px;
+    @include mobile {
+      padding: 5px;
+    }
+
+    .admin {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .modify {
+      text-align: center;
+      display: flex;
+    }
+  }
+  .modify-true {
+    background: rgba(78, 81, 102, 0.8);
+    border-radius: 0 0 20px 20px;
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    textarea {
+      width: 85%;
+      border-radius: 20px;
+      padding: 5px;
+      @include mobile {
+        width: 70%;
+      }
+    }
+    .input {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+    }
+    button {
+      background: $tertiary;
+      border-radius: 25px;
+      color: $secondary;
+      width: 80px;
+      font-size: inherit;
+      cursor: pointer;
+      border: 1.5px solid white;
+      box-shadow: 5px 5px 20px 1px $tertiary;
+
+      &:hover {
+        color: $primary;
+        border: $primary 1.5px solid;
+      }
+    }
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    .comment {
+      align-self: center;
+    }
+    .icon-comm {
+      display: flex;
+      justify-content: space-around;
+    }
+    .form-comment,
+    textarea {
+      width: 80%;
+      display: flex;
+    }
+    button {
+      border-radius: 20px;
+      padding: 5px 10px;
+      background-color: $secondary;
+      color: $tertiary;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+  .showComments {
+    width: 80%;
+    textarea {
+      width: 80%;
+    }
+  }
+}
