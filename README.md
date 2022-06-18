@@ -1,7 +1,7 @@
 
 # GROUPAMANIA : Projet 7 du parcours "Développeur Web" avec OPENCLASSROOMS
 
-Réseau social d'entreprise interne pour les employés.
+Groupomania est un réseau social d'entreprise interne pour les employés.
 Le but de cet outil est de faciliter les interactions entre collègues.
 
 ## Technologies utilisées sur ce projet :
