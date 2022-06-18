@@ -5,9 +5,9 @@ Réseau social d'entreprise interne pour les employés.
 Le but de cet outil est de faciliter les interactions entre collègues.
 
 ## Technologies utilisées sur ce projet :
-* Coté Back : NodeJS Framework Express
-* Coté Front : ReactJS Sass
-* Serveur : mySQL / Sequelize
+* Coté Back : NodeJS Framework Express-4.18
+* Coté Front : ReactJS-18.1 node-sass-7
+* Serveur : mySQL-2.18 / Sequelize-6.19.2
 
 ## Création de votre base de donnée:
 * Une fois la base de donnée créée, renseignez vos informations dans le fichier backend/config/db.config.js 
