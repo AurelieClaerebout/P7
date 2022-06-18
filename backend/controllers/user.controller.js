@@ -68,8 +68,9 @@ exports.findOneUser = (req, res) => {
     req.params.id,
     {
       attributes: ["id", "prenom", "email", "role", "image", "bio"],
+      include: ["like"],
     },
-    { include: ["like"] }
+   
   )
     .then((user) => {
       res.status(200).json({ user });

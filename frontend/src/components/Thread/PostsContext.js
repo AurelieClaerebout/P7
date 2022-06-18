@@ -1,10 +1,12 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { authHeader } from "../../services/auth.header";
+import UserContext from "../Profil/UserContext";
 
 const PostsContext = createContext();
 
 export const PostsProvider = ({ children }) => {
+  const { user } = useContext(UserContext);
   const [posts, setPosts] = useState([]);
   const [reset, setReset] = useState([]);
 
@@ -50,11 +52,11 @@ export const PostsProvider = ({ children }) => {
     await axios
       .post(
         `${process.env.REACT_APP_API_URL}api/posts/${id}/like`,
-
+        { userId: user.id },
         authHeader()
       )
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res) => setReset(res));
+    // .catch((err) => console.log(err));
   };
 
   return (

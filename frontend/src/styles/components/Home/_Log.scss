@@ -3,7 +3,7 @@
   margin: 0 auto;
   border-radius: 20px;
   width: 30%;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   background-color: rgba(255, 215, 215, 0.9);
   @include tablet {
@@ -41,15 +41,22 @@
     }
   }
   #create-user {
-    // background: rgba(253, 45, 1, 0.7);
     width: 80%;
     margin: 10px auto;
     padding: 5px;
-    border-radius: 10px;
     font-size: 1.2rem;
+    @include mobile {
+      margin: auto;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
   }
   h2 {
     @include h2;
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   label {
@@ -71,6 +78,9 @@
     }
     @include tablet {
       width: 80%;
+    }
+    @include mobile {
+      padding: 4px;
     }
   }
   .btn {

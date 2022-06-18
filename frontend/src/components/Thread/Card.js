@@ -17,7 +17,10 @@ const Card = ({ post }) => {
   const [newImage, setNewImage] = useState("");
   const [newFile, setNewFile] = useState();
   const [poster, setPoster] = useState("");
-  const [like, setLike] = useState(false);
+
+  const userLike = post.like.find((like) => like.userId === user.id);
+
+  console.log(userLike);
 
   const handleDelete = (id) => {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer ce post ?")) {
@@ -47,10 +50,6 @@ const Card = ({ post }) => {
       }
     }
   };
-
-  // const handleLikePost = (id) => {
-  //   likePost(id);
-  // };
 
   useEffect(() => {
     axios
@@ -88,12 +87,18 @@ const Card = ({ post }) => {
         )}
       </div>
       <div className="icon">
-        <div className="like" onClick={() => likePost(post.id)}>
-          {like === false && (
-            <img src={coeur} alt="coeur vide" onClick={() => setLike(!like)} />
+        <div className="like">
+          {userLike !== undefined ? (
+            <img src={coeur2} alt="coeur" onClick={() => likePost(post.id)} />
+          ) : (
+            <img
+              src={coeur}
+              alt="coeur vide"
+              onClick={() => likePost(post.id)}
+            />
           )}
+          <span>{post.like.length}</span>
         </div>
-        {like && <img src={coeur2} alt="like" onClick={() => setLike(!like)} />}
         {(user.id === post.userId) | (user.role === 1) ? (
           <div className="admin">
             <div className="modify">

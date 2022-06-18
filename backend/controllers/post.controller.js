@@ -31,6 +31,7 @@ exports.createPost = (req, res, next) => {
 exports.findAllPost = (req, res) => {
   Post.findAll({
     include: ["like"],
+    order: [["createdAt", "DESC"]],
   })
     .then((posts) => {
       res.json(posts);
@@ -188,7 +189,6 @@ exports.likePost = (req, res) => {
     .then((like) => {
       if (like == null) {
         Like.create({
-          like: req.body.like,
           postId: req.params.id,
           userId: req.body.userId,
         })
@@ -201,5 +201,5 @@ exports.likePost = (req, res) => {
           .catch((err) => res.status(400).json(`${err}`));
       }
     })
-    .catch((err) => res.status(400).json({ message: err }));
+    .catch((err) => res.status(400).json({ message: `${err}` }));
 };

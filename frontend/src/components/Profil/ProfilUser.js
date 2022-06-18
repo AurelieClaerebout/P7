@@ -17,6 +17,7 @@ const ProfilUser = () => {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
       deleteUser(id);
       sessionStorage.removeItem("user");
+      window.location = "/";
     }
   };
 

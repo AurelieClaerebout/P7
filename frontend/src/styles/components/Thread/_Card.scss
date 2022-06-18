@@ -62,6 +62,7 @@
       margin: 20px auto 15px;
       height: 70px;
       overflow: scroll;
+      overflow-x: hidden;
       @include mobile {
         width: 100%;
         margin: 15px auto;
@@ -80,15 +81,15 @@
   .post-img {
     display: flex;
     justify-content: center;
-    height: 350px;
-    width: 550px;
+    // height: 350px;
+    // width: 550px;
     @include mobile {
       height: 180px;
       width: 260px;
     }
 
     .img-post {
-      max-height: 300px;
+      height: 230px;
       max-width: 475px;
       border-radius: 20px;
       margin-bottom: 15px;
